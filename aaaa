@@ -1,0 +1,54 @@
+git 一共有四个区域 
+	工作区   add rm status
+	暂存区  	commit
+	本地仓库 	push pull
+	远程仓库（github）
+
+配置config
+/Users/ertiao/.ssh
+	Host github.com
+	HostName github.com
+	User Wangertiao
+	IdentityFile /Users/ertiao/.ssh/id_rsa   私钥文件路径
+
+首先在github注册账号后进行秘钥ssh设置
+ssh-keygen -t rsa -C 59721350@qq.com (你的github邮箱地址)
+
+把.ssh中的id_rsa.pub（公钥）配置到github
+
+
+
+
+
+
+git本地操作
+
+git --version 
+git --help 
+
+git init 			初始化本地仓库
+
+Remote 可以有几个，每一个通常是只读、只写或读/写，它可以理解为是远端代码托管平台的地址。
+git remote add <name> https://github.com/Wangertiao/ertiao.git    添加远端地址->提交到远端的前置条件
+git remote -v 		查看远端地址和配置的名称
+
+git add .  			当前文件夹所有文件添加到->暂存区
+git add test.txt  	将指定文件添加到->暂存区
+
+git rm test.txt					删除某个文件,文件物理删除 暂存区不存在记录
+git rm --cache test.txt 		删除暂存区的文件
+
+
+git status 						查看文件状态
+
+git commit -m "提交描述"			提交代码到本地仓库
+
+git push <name> master  		提交到远端的master节点
+
+git pull <name> master 			表示将远程name主机的master分支拉取过来和本地的当前分支进行合并。
+
+
+
+Sad
+
+
