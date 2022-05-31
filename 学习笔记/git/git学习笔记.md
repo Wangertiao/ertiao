@@ -152,7 +152,11 @@ git push origin :branch1
 ```
 #查看所有版本
 git reflog
-#回退到上一个版本  几个^就是回退到几版本
+#回退到指定id版本 不回影响 暂存区数据 （只是退回了commit信息）
+git reset --soft commitId
+
+git reflog
+#回退到上一个版本  几个^就是回退到几版本(--hard会改变暂存区数据，有可能删除之前的数据）
 git reset --hard HEAD^
 #回退到指定版本（需要先查看所有版本命令）
 git reset --hard +版本id
